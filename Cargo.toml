@@ -1,0 +1,17 @@
+[package]
+name = "elasticsearch-alerter"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4"
+fern = { version = "0.5", features = ["colored"] }
+chrono = "0.4"
+serde = { version = "1.0.133", features = ["derive"] }
+structopt = "0.3.25"
+anyhow = "1.0.52"
+tokio-cron-scheduler = "0.3.1"
+tokio = { version = "1.15.0", features = ["macros", "rt-multi-thread"] }
+duration-str = "0.3.8"
