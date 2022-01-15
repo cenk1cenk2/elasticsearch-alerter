@@ -6,7 +6,6 @@ use structopt::StructOpt;
 use tokio_cron_scheduler::{Job,JobScheduler};
 use utils::logger;
 
-/// Example for allowing to specify options via environment variables.
 #[derive(StructOpt, Debug)]
 #[structopt(
     name = "elasticsearch-alerter",
@@ -25,8 +24,8 @@ struct Command {
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    let opt = Command::from_args();
     let app = Command::clap();
+    let opt = Command::from_args();
 
     let app_name = app.get_name();
 

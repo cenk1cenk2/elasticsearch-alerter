@@ -25,10 +25,11 @@ pub fn setup_logger(level: &str) -> Result<()> {
         })
         .level(
             LevelFilter::from_str(level)
-                .with_context(|| format!("{} is not a valid log level", level))?,
+                .with_context(|| format!("\"{}\" is not a valid logger level.", level))?,
         )
         .chain(io::stdout())
-        .apply()?;
+        .apply()
+        .with_context(|| format!("Can not initiate logger."))?;
 
     Ok(())
 }
