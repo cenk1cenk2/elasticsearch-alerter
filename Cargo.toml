@@ -1,9 +1,13 @@
 [package]
 name = "elasticsearch-alerter"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["Cenk Kilic <cenk@kilic.dev>"]
+description = "A background task to fetch the alerts from an ElasticSearch index and forwards them to the administrators through SMTP."
+license = "MIT"
+readme = "README.md"
+keywords = ["elasticsearch", "smtp", "bgtask", "background", "task"]
+categories = ["command-line-utilities"]
 
 [dependencies]
 log = "0.4"

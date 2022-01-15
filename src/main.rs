@@ -8,11 +8,8 @@ use utils::logger;
 
 #[derive(StructOpt, Debug)]
 #[structopt(
-    name = "elasticsearch-alerter",
-    author = "Cenk Kilic <cenk@kilic.dev>",
-    version = "v1.0.0",
-    about = "elastic",
-    long_about = "something"
+    about = "ElasticSearch alert fetcher.",
+    long_about = "A background task to fetch the alerts from an ElasticSearch index and forwards them to the administrators through SMTP."
 )]
 struct Command {
     #[structopt(long, env, help = "Log level for the application.", default_value = "info", required = false)]
